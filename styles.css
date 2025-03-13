@@ -12,6 +12,7 @@
   --color1: #eeeeee;
   --color2: #ff9c3f;
   --color3: rgb(255, 195, 85);
+  --color4: #44444462;
 }
 
 body {
@@ -20,8 +21,9 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color:black;
+  background-color: black;
   font-family: var(--font1);
+  overflow: hidden;
 }
 
 .calculator {
@@ -33,11 +35,11 @@ body {
   max-height: 650px;
   border: 2px solid #333;
   border-radius: 10px;
-  background-image: url(icons/matematica.png), url(icons/simbolos-de-matematica.png);
+  background-image: url(icons/matematica.png),
+    url(icons/simbolos-de-matematica.png);
   background-size: contain 50px 50px;
   background-repeat: no-repeat;
   background-position: bottom left, top right;
-  
 }
 
 #display {
@@ -68,15 +70,17 @@ button {
   height: 70px;
   border: none;
   border-radius: 20px;
-  background-color: #44444462;
+  background-color: var(--color4);
   color: rgb(0, 0, 0);
   cursor: pointer;
   font-family: sans-serif;
   border-bottom: 1px solid #000000;
   border-right: 1px solid #333;
-  box-shadow: inset 3px 3px 4px rgba(0, 0, 0, 0.336), inset 2px 2px 5px #33333315, 2px 2px 5px #333333a8;
+  box-shadow: inset 3px 3px 4px rgba(0, 0, 0, 0.336),
+    inset 2px 2px 5px #33333315, 2px 2px 5px #333333a8;
+  outline: none;
 
-  img{
+  img {
     width: 30px;
     height: 30px;
     filter: drop-shadow(2px 2px 3px #3333336c);
@@ -101,11 +105,10 @@ button {
 .zero {
   grid-column: span 2;
   width: 160px;
-    background-color: var(--color3);
+  background-color: var(--color3);
 }
 
 button:active {
-
-    border-bottom: 2px solid #000000;
+  border-bottom: 2px solid #000000;
   border-right: 2px solid #333;
 }
